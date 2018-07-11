@@ -6,19 +6,20 @@
 -->
 <html>
 	<head>
-		<title>Read Only by HTML5 UP</title>
+		<title>Danny Gone</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		
 	</head>
 	<body class="is-preload">
 
 		<!-- Header -->
 			<section id="header">
 				<header>
-					<span class="image avatar"><img src="images/avatar.jpg" alt="" /></span>
-					<h1 id="logo"><a href="#">Sara The Scientist</a></h1>
-					<p style="color:darkgray;font-size:40px;">Sara Duncan</p>
+					<span class="image avatar"><img src="images/city.jpg" alt="" /></span>
+					<h1 id="logo"><a href="#">Daniel Gonzalez</a></h1>
+					<p style="color:darkgray;font-size:40px;">B.A Engineering and Int'l Affairs</p>
 				</header>
 				<nav id="nav">
 					<ul>
@@ -48,7 +49,7 @@
 						<!-- One -->
 							<section id="one">
 								<div class="image main" data-position="center">
-									<img src="images/landscape.jpg" alt="" />
+									<img src="images/pablo.jpg" alt="" />
 								</div>
 								<div class="container">
 									<header class="major">
@@ -60,6 +61,11 @@
 								</div>
 							</section>
 
+							<script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us18.list-manage.com","uuid":"cbe7d3559ff340281cf538020","lid":"f71372acfd"}) })</script>
+							<script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
+							<script type="text/javascript">require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us18.list-manage.com","uuid":"cbe7d3559ff340281cf538020","lid":"f71372acfd"}) })</script>
+		
+
 						<!-- Three -->
 						<section id="three" style="background-color: beige">
 							<div class="container">
@@ -67,21 +73,21 @@
 								<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer. Integer eu ante ornare amet commetus.</p>
 								<div class="features">
 									<article>
-										<a href="#" class="image"><img src="images/factory smoke.jpg" alt="" /></a>
+										<a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
 										<div class="inner">
 											<h4>Possibly broke spacetime</h4>
 											<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
 										</div>
 									</article>
 									<article>
-										<a href="#" class="image"><img src="images/plants.jpg" alt="" /></a>
+										<a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
 										<div class="inner">
 											<h4>Terraformed a small moon</h4>
 											<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
 										</div>
 									</article>
 									<article>
-										<a href="#" class="image"><img src="images/people.jpg" alt="" /></a>
+										<a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
 										<div class="inner">
 											<h4>Snapped dark matter in the wild</h4>
 											<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
@@ -114,12 +120,32 @@
 								<div class="container">
 									<h3>Contact Me</h3>
 									<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer. Integer eu ante ornare amet commetus.</p>
-									<form method="post" action="#">
+									<form method="post" action="#" id="signup-form" @submit.prevent="processForm" >
 										<div class="row gtr-uniform">
-											<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
-											<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
-											<div class="col-12"><input type="text" name="subject" id="subject" placeholder="Subject" /></div>
-											<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="6"></textarea></div>
+											<div class="col-6 col-12-xsmall"><input 
+												type="text" 
+												name="name" 
+												v-model="name"
+												id="name" 
+												placeholder="Name" /></div>
+											<div class="col-6 col-12-xsmall"><input 
+												type="email" 
+												name="email"
+												v-model="email" 
+												id="email" 
+												placeholder="Email" /></div>
+											<div class="col-12"><input 
+												type="text" 
+												name="subject"
+												v-model="subject" 
+												id="subject" 
+												placeholder="Subject" /></div>
+											<div class="col-12"><textarea 
+												name="message"
+												v-model="message" 
+												id="message" 
+												placeholder="Message" 
+												rows="6"></textarea></div>
 											<div class="col-12">
 												<ul class="actions">
 													<li><input type="submit" class="primary" value="Send Message" /></li>
@@ -130,8 +156,33 @@
 									</form>
 								</div>
 							</section>
+						
+
+						<!-- Begin MailChimp Signup Form -->
+							<!-- Begin MailChimp Signup Form -->
+							<link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+							<style type="text/css">
+								#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}
+								/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+								We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+							</style>
+							<div id="mc_embed_signup">
+							<form action="https://na.us18.list-manage.com/subscribe/post?u=cbe7d3559ff340281cf538020&amp;id=f71372acfd" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+								<div id="mc_embed_signup_scroll">
+								<label for="mce-EMAIL">Subscribe to our mailing list</label>
+								<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+								<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+								<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_cbe7d3559ff340281cf538020_f71372acfd" tabindex="-1" value=""></div>
+								<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+								</div>
+							</form>
+							</div>
+
+						<!--End mc_embed_signup-->
+							
 
 						<!-- Five -->
+						
 						<!--
 							<section id="five">
 								<div class="container">
@@ -485,6 +536,6 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/main.js"></script>
 			<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 			<script src="./index.js"></script>
-
+		
 	</body>
 </html>
